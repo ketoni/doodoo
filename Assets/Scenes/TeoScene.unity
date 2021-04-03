@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &670511507
 Rigidbody2D:
   serializedVersion: 4
@@ -272,7 +272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &833598509
 Rigidbody2D:
   serializedVersion: 4
@@ -403,7 +403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1076639712
 Rigidbody2D:
   serializedVersion: 4
@@ -534,7 +534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1383752979
 Rigidbody2D:
   serializedVersion: 4
@@ -665,7 +665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1642772425
 Rigidbody2D:
   serializedVersion: 4
@@ -868,6 +868,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8469766517965807910, guid: a2f1fee0fd3f05c4890c43bdcf4c225f, type: 3}
+      propertyPath: OffSet
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8469766517965807911, guid: a2f1fee0fd3f05c4890c43bdcf4c225f, type: 3}
       propertyPath: m_Name
       value: BayBladeCreator

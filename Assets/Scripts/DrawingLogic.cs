@@ -42,16 +42,22 @@ public class DrawingLogic : MonoBehaviour
         {
 
             GameObject obj = Instantiate(SpawnObject);
-            Vector3 spawnPos = _points[_points.Count - 1];
-            obj.transform.position = spawnPos;
-            Debug.Log("spawnPos: " + obj.transform.position.ToString());
+           // Vector3 spawnPos = _points[_points.Count - 1];
+            Vector2 sum = Vector2.zero;
             for (int i = 0; i < _points.Count; i++)
             {
-                obj.GetComponent<SpriteShapeController>().spline.InsertPointAt(i, _points[i]-spawnPos);
+                sum += new Vector2(_points[i].x, _points[i].y);
+            }
+            sum /= _points.Count;
+            obj.transform.position = sum;
+            //Debug.Log("spawnPos: " + obj.transform.position.ToString());
+            for (int i = 0; i < _points.Count; i++)
+            {
+                obj.GetComponent<SpriteShapeController>().spline.InsertPointAt(i, _points[i] - new Vector3(sum.x,sum.y,0));
             }
             //obj.GetComponent<SpriteShapeController>().BakeCollider();
             obj.AddComponent<PolygonCollider2D>();
-            obj.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            //obj.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
             _lineRenderer.positionCount = 0;
             _lineRenderer.SetPositions(new Vector3[0]);
