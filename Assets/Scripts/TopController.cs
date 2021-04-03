@@ -17,7 +17,7 @@ public class TopController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.angularVelocity = spin;
+        rb.angularVelocity = Mathf.Sign(Random.Range(-1f, 1f)) * spin + Random.Range(-100f, 100f);
         rb.angularDrag = angularDrag;
     }
 
