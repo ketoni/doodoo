@@ -51,6 +51,7 @@ public class DrawingLogic : MonoBehaviour
             }
             //obj.GetComponent<SpriteShapeController>().BakeCollider();
             obj.AddComponent<PolygonCollider2D>();
+            obj.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
             _lineRenderer.positionCount = 0;
             _lineRenderer.SetPositions(new Vector3[0]);
